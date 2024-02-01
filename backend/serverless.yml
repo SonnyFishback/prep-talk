@@ -3,6 +3,7 @@ service: 'cornerstone'
 frameworkVersion: '3'
 configValidationMode: 'error'
 deprecationNotificationMode: 'warn:summary'
+useDotenv: true
 
 provider:
   name: 'aws'
@@ -22,3 +23,6 @@ functions:
       - httpApi:
           path: '/generate'
           method: 'post'
+    environment:
+      OPENAI_API_KEY: ${env:OPENAI_API_KEY}
+      

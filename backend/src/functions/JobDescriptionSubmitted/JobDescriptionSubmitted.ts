@@ -3,28 +3,19 @@ import {
     APIGatewayProxyHandlerV2,
     APIGatewayProxyResultV2
 } from 'aws-lambda';
+import OpenAI from 'openai';
+const openai = new OpenAI();
 
 export const handler: APIGatewayProxyHandlerV2 = async (event: APIGatewayProxyEventV2): Promise<APIGatewayProxyResultV2> => {
     try {
-        console.info('Job Description Submitted', JSON.stringify(event, null, 2));
-        const body = {
-            questions: [
-                {
-                    question: 'What is your name?'
-                },
-                {
-                    question: 'Tell me some things about yourself.'
-                },
-                {
-                    question: 'Tell me about a time you had to work with a difficult person. How did you handle it?'
-                }
-            ]
-        }
-        return {
-            statusCode: 200,
-            body: JSON.stringify(body),
-            isBase64Encoded: false
-        };
+        if (!event.body) throw new Error('No job description provided');
+        const response = await generateQuestions(event.body);
+        console.log(response);
+        // return {
+        //     statusCode: 200,
+        //     body: JSON.stringify(response),
+        //     isBase64Encoded: false
+        // };
     } catch (error) {
         console.error(error);
         return {
@@ -34,3 +25,25 @@ export const handler: APIGatewayProxyHandlerV2 = async (event: APIGatewayProxyEv
         };
     };
 };
+
+const generateQuestions = async (jobDescription: string) => {
+    try {
+        const completion = await openai.chat.completions.create({
+            model: 'gpt-3.5-turbo-1106',
+            messages: [
+                {
+                    role: 'system',
+                    content: 'Please generate me some practice technical interview questions based on the following job description. Please ensure each question is its owm separate index in a json array'
+                },
+                {
+                    role: 'system',
+                    content: jobDescription
+                }
+            ],
+            response_format: { type: 'json_object' }
+        })
+        return completion.choices[0]
+    } catch (error) {
+        console.error(error);
+    }
+}

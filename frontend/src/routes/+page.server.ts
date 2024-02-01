@@ -11,6 +11,9 @@ export const actions = {
         const url = 'https://licf9v0cx2.execute-api.us-east-1.amazonaws.com/generate';
         const options = {
             method: 'POST',
+            headers: {
+                'Content-Type': 'application/json'
+            },
             body: JSON.stringify({ description }),
         }
         const response = await fetch(url, options);

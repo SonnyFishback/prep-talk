@@ -3,5 +3,8 @@
 		"@types/aws-lambda": "^8.10.133",
 		"esbuild": "^0.20.0",
 		"serverless-esbuild": "^1.50.2"
+	},
+	"dependencies": {
+		"openai": "^4.26.0"
 	}
 }
