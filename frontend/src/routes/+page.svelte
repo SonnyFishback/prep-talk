@@ -1,2 +1,11 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script lang='ts'>
+
+</script>
+
+<main>
+    <h2>Upload a job description to generate interview questions:</h2>
+    <form>
+        <textarea name="description" id="description" cols="30" rows="10"/>
+        <button>Submit</button>
+    </form>
+</main>
