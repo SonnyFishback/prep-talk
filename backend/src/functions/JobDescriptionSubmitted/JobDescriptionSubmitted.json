@@ -1,0 +1,48 @@
+{
+  "version": "2.0",
+  "routeKey": "POST /generate",
+  "rawPath": "/generate",
+  "rawQueryString": "",
+  "headers": {
+    "accept": "application/json",
+    "accept-encoding": "gzip, deflate, br",
+    "accept-language": "en-US,en;q=0.9",
+    "content-length": "1345",
+    "content-type": "multipart/form-data; boundary=----WebKitFormBoundary4w4QdLzawcAsfG8h",
+    "host": "licf9v0cx2.execute-api.us-east-1.amazonaws.com",
+    "origin": "http://localhost:5173",
+    "referer": "http://localhost:5173/",
+    "sec-ch-ua": "\"Not_A Brand\";v=\"8\", \"Chromium\";v=\"120\", \"Google Chrome\";v=\"120\"",
+    "sec-ch-ua-mobile": "?1",
+    "sec-ch-ua-platform": "\"Android\"",
+    "sec-fetch-dest": "empty",
+    "sec-fetch-mode": "cors",
+    "sec-fetch-site": "same-origin",
+    "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
+    "x-amzn-trace-id": "Root=1-65bb1337-73e18ae67983cb6f21f68cc6",
+    "x-forwarded-for": "35.145.214.158",
+    "x-forwarded-port": "443",
+    "x-forwarded-proto": "https",
+    "x-sveltekit-action": "true"
+  },
+  "requestContext": {
+    "accountId": "082369611471",
+    "apiId": "licf9v0cx2",
+    "domainName": "licf9v0cx2.execute-api.us-east-1.amazonaws.com",
+    "domainPrefix": "licf9v0cx2",
+    "http": {
+      "method": "POST",
+      "path": "/generate",
+      "protocol": "HTTP/1.1",
+      "sourceIp": "35.145.214.158",
+      "userAgent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
+    },
+    "requestId": "Sb_wwirxIAMEJ4Q=",
+    "routeKey": "POST /generate",
+    "stage": "$default",
+    "time": "01/Feb/2024:03:42:47 +0000",
+    "timeEpoch": 1706758967780
+  },
+  "body": "LS0tLS0tV2ViS2l0Rm9ybUJvdW5kYXJ5NHc0UWRMemF3Y0FzZkc4aA0KQ29udGVudC1EaXNwb3NpdGlvbjogZm9ybS1kYXRhOyBuYW1lPSJkZXNjcmlwdGlvbiINCg0KSm9iIFRpdGxlOiBNYXJrZXRpbmcgQ29vcmRpbmF0b3INCg0KTG9jYXRpb246IE5ldyBZb3JrLCBOWQ0KDQpKb2IgRGVzY3JpcHRpb246DQoNCldlIGFyZSBzZWVraW5nIGEgZHluYW1pYyBhbmQgY3JlYXRpdmUgTWFya2V0aW5nIENvb3JkaW5hdG9yIHRvIGpvaW4gb3VyIHRlYW0uIFRoZSBpZGVhbCBjYW5kaWRhdGUgd2lsbCBiZSByZXNwb25zaWJsZSBmb3IgZGV2ZWxvcGluZyBhbmQgZXhlY3V0aW5nIG1hcmtldGluZyBzdHJhdGVnaWVzIHRvIGluY3JlYXNlIGJyYW5kIGF3YXJlbmVzcyBhbmQgZHJpdmUgc2FsZXMuIFRoaXMgcm9sZSBpbnZvbHZlcyBjb29yZGluYXRpbmcgbWFya2V0aW5nIGNhbXBhaWducywgbWFuYWdpbmcgc29jaWFsIG1lZGlhIGFjY291bnRzLCBhbmQgYW5hbHl6aW5nIG1hcmtldCB0cmVuZHMuDQoNClJlc3BvbnNpYmlsaXRpZXM6DQoNCkRldmVsb3AgYW5kIGltcGxlbWVudCBtYXJrZXRpbmcgc3RyYXRlZ2llcyBpbiBsaW5lIHdpdGggY29tcGFueSBnb2Fscy4NCkNvb3JkaW5hdGUgd2l0aCB0aGUgc2FsZXMgdGVhbSB0byBjcmVhdGUgcHJvbW90aW9uYWwgbWF0ZXJpYWxzIGFuZCBjYW1wYWlnbnMuDQpNYW5hZ2UgYW5kIHVwZGF0ZSB0aGUgY29tcGFueSdzIHNvY2lhbCBtZWRpYSBwcm9maWxlcyBhbmQgcHJlc2VuY2UuDQpBbmFseXplIG1hcmtldCB0cmVuZHMgYW5kIGNvbXBldGl0b3JzJyBhY3Rpdml0aWVzIHRvIGlkZW50aWZ5IG9wcG9ydHVuaXRpZXMuDQpPcmdhbml6ZSBhbmQgcGFydGljaXBhdGUgaW4gbWFya2V0aW5nIGV2ZW50cyBhbmQgdHJhZGUgc2hvd3MuDQpQcmVwYXJlIHJlcG9ydHMgb24gbWFya2V0aW5nIHBlcmZvcm1hbmNlIGFuZCBST0kuDQpRdWFsaWZpY2F0aW9uczoNCg0KQmFjaGVsb3IncyBkZWdyZWUgaW4gTWFya2V0aW5nLCBCdXNpbmVzcywgb3IgcmVsYXRlZCBmaWVsZC4NCkF0IGxlYXN0IDIgeWVhcnMgb2YgZXhwZXJpZW5jZSBpbiBhIG1hcmtldGluZyByb2xlLg0KU3Ryb25nIHVuZGVyc3RhbmRpbmcgb2YgbWFya2V0aW5nIHByaW5jaXBsZXMgYW5kIHN0cmF0ZWdpZXMuDQpFeGNlbGxlbnQgY29tbXVuaWNhdGlvbiBhbmQgaW50ZXJwZXJzb25hbCBza2lsbHMuDQpQcm9maWNpZW5jeSBpbiBzb2NpYWwgbWVkaWEgcGxhdGZvcm1zIGFuZCBtYXJrZXRpbmcgdG9vbHMuDQpBYmlsaXR5IHRvIHdvcmsgaW5kZXBlbmRlbnRseSBhbmQgYXMgcGFydCBvZiBhIHRlYW0uDQotLS0tLS1XZWJLaXRGb3JtQm91bmRhcnk0dzRRZEx6YXdjQXNmRzhoLS0NCg==",
+  "isBase64Encoded": true
+}

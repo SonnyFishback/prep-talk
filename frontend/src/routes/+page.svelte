@@ -1,10 +1,12 @@
 <script lang='ts'>
+	import { enhance } from "$app/forms";
+
 
 </script>
 
 <main>
     <h2>Upload a job description to generate interview questions:</h2>
-    <form>
+    <form action="/api/generate" method="post" use:enhance>
         <textarea name="description" id="description" cols="30" rows="10"/>
         <button>Submit</button>
     </form>
