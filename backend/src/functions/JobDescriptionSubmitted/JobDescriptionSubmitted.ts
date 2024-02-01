@@ -2,7 +2,7 @@ import {
     APIGatewayProxyEventV2,
     APIGatewayProxyHandlerV2,
     APIGatewayProxyResultV2
-} from 'aws-lambda'
+} from 'aws-lambda';
 
 export const handler: APIGatewayProxyHandlerV2 = async (event: APIGatewayProxyEventV2): Promise<APIGatewayProxyResultV2> => {
     try {
@@ -24,13 +24,13 @@ export const handler: APIGatewayProxyHandlerV2 = async (event: APIGatewayProxyEv
             statusCode: 200,
             body: JSON.stringify(body),
             isBase64Encoded: false
-        }
+        };
     } catch (error) {
         console.error(error);
         return {
             statusCode: 500,
             body: 'An error occurred processing your request.',
             isBase64Encoded: false
-        }
-    }
-}
+        };
+    };
+};
