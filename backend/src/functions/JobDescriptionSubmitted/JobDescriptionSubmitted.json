@@ -4,26 +4,19 @@
   "rawPath": "/generate",
   "rawQueryString": "",
   "headers": {
-    "accept": "application/json",
-    "accept-encoding": "gzip, deflate, br",
-    "accept-language": "en-US,en;q=0.9",
-    "content-length": "1345",
-    "content-type": "multipart/form-data; boundary=----WebKitFormBoundary4w4QdLzawcAsfG8h",
+    "accept": "*/*",
+    "accept-encoding": "br, gzip, deflate",
+    "accept-language": "*",
+    "content-length": "1443",
+    "content-type": "application/json",
     "host": "licf9v0cx2.execute-api.us-east-1.amazonaws.com",
     "origin": "http://localhost:5173",
-    "referer": "http://localhost:5173/",
-    "sec-ch-ua": "\"Not_A Brand\";v=\"8\", \"Chromium\";v=\"120\", \"Google Chrome\";v=\"120\"",
-    "sec-ch-ua-mobile": "?1",
-    "sec-ch-ua-platform": "\"Android\"",
-    "sec-fetch-dest": "empty",
     "sec-fetch-mode": "cors",
-    "sec-fetch-site": "same-origin",
-    "user-agent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36",
-    "x-amzn-trace-id": "Root=1-65bb1337-73e18ae67983cb6f21f68cc6",
+    "user-agent": "node",
+    "x-amzn-trace-id": "Root=1-65bb1e95-4d05408f4052aee267241b46",
     "x-forwarded-for": "35.145.214.158",
     "x-forwarded-port": "443",
-    "x-forwarded-proto": "https",
-    "x-sveltekit-action": "true"
+    "x-forwarded-proto": "https"
   },
   "requestContext": {
     "accountId": "082369611471",
@@ -35,14 +28,14 @@
       "path": "/generate",
       "protocol": "HTTP/1.1",
       "sourceIp": "35.145.214.158",
-      "userAgent": "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Mobile Safari/537.36"
+      "userAgent": "node"
     },
-    "requestId": "Sb_wwirxIAMEJ4Q=",
+    "requestId": "ScG3ejTqoAMEYRw=",
     "routeKey": "POST /generate",
     "stage": "$default",
-    "time": "01/Feb/2024:03:42:47 +0000",
-    "timeEpoch": 1706758967780
+    "time": "01/Feb/2024:04:31:17 +0000",
+    "timeEpoch": 1706761877979
   },
-  "body": "LS0tLS0tV2ViS2l0Rm9ybUJvdW5kYXJ5NHc0UWRMemF3Y0FzZkc4aA0KQ29udGVudC1EaXNwb3NpdGlvbjogZm9ybS1kYXRhOyBuYW1lPSJkZXNjcmlwdGlvbiINCg0KSm9iIFRpdGxlOiBNYXJrZXRpbmcgQ29vcmRpbmF0b3INCg0KTG9jYXRpb246IE5ldyBZb3JrLCBOWQ0KDQpKb2IgRGVzY3JpcHRpb246DQoNCldlIGFyZSBzZWVraW5nIGEgZHluYW1pYyBhbmQgY3JlYXRpdmUgTWFya2V0aW5nIENvb3JkaW5hdG9yIHRvIGpvaW4gb3VyIHRlYW0uIFRoZSBpZGVhbCBjYW5kaWRhdGUgd2lsbCBiZSByZXNwb25zaWJsZSBmb3IgZGV2ZWxvcGluZyBhbmQgZXhlY3V0aW5nIG1hcmtldGluZyBzdHJhdGVnaWVzIHRvIGluY3JlYXNlIGJyYW5kIGF3YXJlbmVzcyBhbmQgZHJpdmUgc2FsZXMuIFRoaXMgcm9sZSBpbnZvbHZlcyBjb29yZGluYXRpbmcgbWFya2V0aW5nIGNhbXBhaWducywgbWFuYWdpbmcgc29jaWFsIG1lZGlhIGFjY291bnRzLCBhbmQgYW5hbHl6aW5nIG1hcmtldCB0cmVuZHMuDQoNClJlc3BvbnNpYmlsaXRpZXM6DQoNCkRldmVsb3AgYW5kIGltcGxlbWVudCBtYXJrZXRpbmcgc3RyYXRlZ2llcyBpbiBsaW5lIHdpdGggY29tcGFueSBnb2Fscy4NCkNvb3JkaW5hdGUgd2l0aCB0aGUgc2FsZXMgdGVhbSB0byBjcmVhdGUgcHJvbW90aW9uYWwgbWF0ZXJpYWxzIGFuZCBjYW1wYWlnbnMuDQpNYW5hZ2UgYW5kIHVwZGF0ZSB0aGUgY29tcGFueSdzIHNvY2lhbCBtZWRpYSBwcm9maWxlcyBhbmQgcHJlc2VuY2UuDQpBbmFseXplIG1hcmtldCB0cmVuZHMgYW5kIGNvbXBldGl0b3JzJyBhY3Rpdml0aWVzIHRvIGlkZW50aWZ5IG9wcG9ydHVuaXRpZXMuDQpPcmdhbml6ZSBhbmQgcGFydGljaXBhdGUgaW4gbWFya2V0aW5nIGV2ZW50cyBhbmQgdHJhZGUgc2hvd3MuDQpQcmVwYXJlIHJlcG9ydHMgb24gbWFya2V0aW5nIHBlcmZvcm1hbmNlIGFuZCBST0kuDQpRdWFsaWZpY2F0aW9uczoNCg0KQmFjaGVsb3IncyBkZWdyZWUgaW4gTWFya2V0aW5nLCBCdXNpbmVzcywgb3IgcmVsYXRlZCBmaWVsZC4NCkF0IGxlYXN0IDIgeWVhcnMgb2YgZXhwZXJpZW5jZSBpbiBhIG1hcmtldGluZyByb2xlLg0KU3Ryb25nIHVuZGVyc3RhbmRpbmcgb2YgbWFya2V0aW5nIHByaW5jaXBsZXMgYW5kIHN0cmF0ZWdpZXMuDQpFeGNlbGxlbnQgY29tbXVuaWNhdGlvbiBhbmQgaW50ZXJwZXJzb25hbCBza2lsbHMuDQpQcm9maWNpZW5jeSBpbiBzb2NpYWwgbWVkaWEgcGxhdGZvcm1zIGFuZCBtYXJrZXRpbmcgdG9vbHMuDQpBYmlsaXR5IHRvIHdvcmsgaW5kZXBlbmRlbnRseSBhbmQgYXMgcGFydCBvZiBhIHRlYW0uDQotLS0tLS1XZWJLaXRGb3JtQm91bmRhcnk0dzRRZEx6YXdjQXNmRzhoLS0NCg==",
-  "isBase64Encoded": true
+  "body": "{\"description\":\"Job Title: Junior Software Engineer\\r\\n\\r\\nLocation: San Francisco, CA\\r\\n\\r\\nJob Description:\\r\\n\\r\\nWe are looking for an enthusiastic Junior Software Engineer to join our development team. The ideal candidate will have a passion for technology and software development, with a willingness to learn and grow. You will work alongside experienced engineers to design, develop, and maintain software applications.\\r\\n\\r\\nResponsibilities:\\r\\n\\r\\nAssist in the design, development, and implementation of software applications.\\r\\nWrite clean, maintainable, and efficient code under the guidance of senior engineers.\\r\\nParticipate in code reviews to maintain code quality and share knowledge.\\r\\nCollaborate with cross-functional teams to identify and resolve software issues.\\r\\nContribute to the development of technical documentation and user manuals.\\r\\nStay up-to-date with new technologies and programming best practices.\\r\\nQualifications:\\r\\n\\r\\nBachelor's degree in Computer Science, Engineering, or related field.\\r\\nKnowledge of programming languages such as Java, C++, Python, or JavaScript.\\r\\nFamiliarity with software development methodologies like Agile and Scrum.\\r\\nBasic understanding of databases and web development technologies.\\r\\nStrong problem-solving and analytical skills.\\r\\nExcellent communication skills and ability to work in a team environment.\\r\\nEagerness to learn and adapt to new challenges.\"}",
+  "isBase64Encoded": false
 }
