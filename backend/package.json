@@ -1,0 +1,6 @@
+{
+	"devDependencies": {
+		"serverless-esbuild": "^1.50.2",
+		"esbuild": "^0.20.0"
+	}
+}
