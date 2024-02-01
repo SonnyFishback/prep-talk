@@ -5,6 +5,9 @@ settings:
   excludeLinksFromLockfile: false
 
 devDependencies:
+  '@types/aws-lambda':
+    specifier: ^8.10.133
+    version: 8.10.133
   esbuild:
     specifier: ^0.20.0
     version: 0.20.0
@@ -240,6 +243,10 @@ packages:
     dependencies:
       '@nodelib/fs.scandir': 2.1.5
       fastq: 1.17.0
+    dev: true
+
+  /@types/aws-lambda@8.10.133:
+    resolution: {integrity: sha512-sr852MAL/79rjDelXP6ZuJ6GwOvXIRrFAoC8a+w91mZ5XR71CuzSgo1d0+pG1qgfPhjFgaibu7SWaoC5BA7pyQ==}
     dev: true
 
   /acorn-walk@8.3.2:
