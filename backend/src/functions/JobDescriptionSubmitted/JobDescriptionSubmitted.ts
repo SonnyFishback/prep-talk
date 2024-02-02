@@ -8,19 +8,19 @@ const openai = new OpenAI();
 
 export const handler: APIGatewayProxyHandlerV2 = async (event: APIGatewayProxyEventV2): Promise<APIGatewayProxyResultV2> => {
     try {
-        if (!event.body) throw new Error('No job description provided');
-        const response = await generateQuestions(event.body);
-        console.log(response);
-        // return {
-        //     statusCode: 200,
-        //     body: JSON.stringify(response),
-        //     isBase64Encoded: false
-        // };
+        if (!event.body) throw new Error('Bad Request: No body provided.`');
+
+        const questions = await generateQuestions(event.body);
+        return {
+            statusCode: 200,
+            body: JSON.stringify({ questions }),
+            isBase64Encoded: false
+        };
     } catch (error) {
-        console.error(error);
+        console.info(error);
         return {
             statusCode: 500,
-            body: 'An error occurred processing your request.',
+            body: JSON.stringify({ error: error }),
             isBase64Encoded: false
         };
     };
@@ -33,7 +33,7 @@ const generateQuestions = async (jobDescription: string) => {
             messages: [
                 {
                     role: 'system',
-                    content: 'Please generate me some practice technical interview questions based on the following job description. Please ensure each question is its owm separate index in a json array'
+                    content: 'Please generate me some practice technical interview questions based on the following job description. Please ensure each question is its owm separate index in a json array. Ensure that the name of the array is questions.'
                 },
                 {
                     role: 'system',
@@ -42,8 +42,9 @@ const generateQuestions = async (jobDescription: string) => {
             ],
             response_format: { type: 'json_object' }
         })
-        return completion.choices[0]
+        const data = JSON.parse(completion.choices[0].message.content || '{}')
+        return data.questions || [];
     } catch (error) {
-        console.error(error);
+        console.info(error);
     }
 }
