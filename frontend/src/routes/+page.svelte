@@ -1,5 +1,5 @@
 <script lang='ts'>
-	import { enhance } from "$app/forms";
+	import { enhance } from '$app/forms';
     import type { ActionData } from './$types';
     export let form: ActionData;
     $:data = console.log(form);
@@ -32,10 +32,10 @@
     `
 </script>
 
-<main>
+<main class='flex'>
     <h2>Upload a job description to generate interview questions:</h2>
-    <form action="?/generate" method="post" use:enhance>
-        <textarea name="description" id="description" cols="30" rows="10" value={jobDescription}/>
+    <form action='?/generate' method='post' use:enhance class='flex'>
+        <textarea name='description' id='description' cols='30' rows='10' value={jobDescription}/>
         <button>Submit</button>
     </form>
 </main>
