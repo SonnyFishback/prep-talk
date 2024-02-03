@@ -1,6 +1,7 @@
 <script lang='ts'>
 	import { enhance } from '$app/forms';
     import type { ActionData } from './$types';
+    import Button from '$lib/components/ui/button/button.svelte'
     export let form: ActionData;
     $:data = console.log(form);
     const jobDescription = `
@@ -36,6 +37,6 @@
     <h2>Upload a job description to generate interview questions:</h2>
     <form action='?/generate' method='post' use:enhance class='flex'>
         <textarea name='description' id='description' cols='30' rows='10' value={jobDescription}/>
-        <button>Submit</button>
+        <Button type="submit">Submit</Button>
     </form>
 </main>
