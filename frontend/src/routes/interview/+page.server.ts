@@ -22,8 +22,9 @@ export const actions = {
             if (!response.ok) throw new Error('Uh Oh: Failed to generate questions.');
             const data = await response.json();
             const { questions } = data;
+            console.log(JSON.stringify(questions, null, 2));
             return {
-                ...questions
+                questions: questions
             }
         } catch (error) {
             console.error(error);
