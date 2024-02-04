@@ -38,7 +38,9 @@
 		"clsx": "^2.1.0",
 		"lucide": "^0.321.0",
 		"lucide-svelte": "^0.321.0",
+		"svelte-legos": "^0.2.2",
 		"tailwind-merge": "^2.2.1",
-		"tailwind-variants": "^0.1.20"
+		"tailwind-variants": "^0.1.20",
+		"vaul-svelte": "^0.2.2"
 	}
 }

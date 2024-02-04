@@ -8,9 +8,8 @@ const openai = new OpenAI();
 
 export const handler: APIGatewayProxyHandlerV2 = async (event: APIGatewayProxyEventV2): Promise<APIGatewayProxyResultV2> => {
     try {
-        if (!event.body) throw new Error('Bad Request: No body provided.`');
-
-        const questions = await generateQuestions(event.body);
+        const jobDescription = event.body || ''; // we should default to something here for the prompt so we always generate questions.
+        const questions = await generateQuestions(jobDescription);
         return {
             statusCode: 200,
             body: JSON.stringify({ questions }),

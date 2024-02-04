@@ -1,4 +1,3 @@
-import { walk } from 'svelte/compiler';
 import type { PageServerLoad, Actions } from './$types';
 
 export const load = (async () => {
@@ -19,10 +18,13 @@ export const actions = {
                 body: JSON.stringify({ description }),
             }
             const response = await fetch(url, options);
-            if (!response.ok) throw new Error('Uh Oh: Failed to generate questions.');
+            if (!response.ok) {
+                console.error(response)
+                throw new Error('Uh Oh: Failed to generate questions.');
+            }
             const data = await response.json();
+            console.log(data);
             const { questions } = data;
-            console.log(JSON.stringify(questions, null, 2));
             return {
                 questions: questions
             }
