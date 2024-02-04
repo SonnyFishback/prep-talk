@@ -1,8 +1,9 @@
+<svelte:head>
+    <title>Prep Talk</title>
+</svelte:head>
+
 <script lang="ts">
-    import type { LayoutData } from './$types';
     import '../app.css'
-    
-    export let data: LayoutData;
 </script>
 
 <slot/>

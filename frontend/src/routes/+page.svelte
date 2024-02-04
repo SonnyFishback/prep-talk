@@ -1,11 +1,5 @@
-<svelte:head>
-    <title>Prep Talk</title>
-</svelte:head>
-
 <script lang='ts'>
     import Button from '$lib/components/ui/button/button.svelte'
-    // import type { ActionData } from './$types';
-    // export let form: ActionData;
 </script>
 
 <!-- <header class="min-h-[8vh]">
