@@ -25,6 +25,7 @@ export const actions = {
             const data = await response.json();
             console.log(data);
             const { questions } = data;
+            setTimeout(() => {}, 2000) // timeout to exaggerate loading time
             return {
                 questions: questions
             }
