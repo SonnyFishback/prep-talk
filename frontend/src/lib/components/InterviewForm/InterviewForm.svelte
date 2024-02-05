@@ -5,6 +5,7 @@
 	import * as Carousel from '$lib/components/ui/carousel/index.js';
 	import * as Card from '$lib/components/ui/card/index.js';
 	import { Lightbulb } from 'lucide-svelte';
+    
 	// import Slider from '$lib/components/ui/slider/slider.svelte';
 	import { enhance } from '$app/forms';
 

@@ -4,7 +4,7 @@
 </script>
 
 <div class="m-5">
-    <p class="text-lg">How was this question?</p>
+    <p class="text-sm">How was this question?</p>
     <ToggleGroup.Root type="single" class="flex justify-start">
         <ToggleGroup.Item value="up">
             <ThumbsUp/>
