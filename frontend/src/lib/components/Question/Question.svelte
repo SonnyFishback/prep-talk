@@ -6,6 +6,7 @@
 	import Feedback from './Feedback/Feedback.svelte';
 	import Separator from '$lib/components/ui/separator/separator.svelte';
 	import { mediaQuery } from 'svelte-legos';
+	import { PUBLIC_AWS_ACCESS_KEY_ID, PUBLIC_AWS_SECRET_ACCESS_KEY } from '$env/static/public';
 
 	import { PollyClient, SynthesizeSpeechCommand } from '@aws-sdk/client-polly';
 
@@ -20,8 +21,8 @@
 			const config = {
 				region: 'us-west-2',
 				credentials: {
-					accessKeyId: '',
-					secretAccessKey: ''
+					accessKeyId: PUBLIC_AWS_ACCESS_KEY_ID,
+					secretAccessKey: PUBLIC_AWS_SECRET_ACCESS_KEY
 				}
 			};
 			const client = new PollyClient(config);
@@ -43,17 +44,21 @@
 
 			const audio = new Audio(audioUrl);
 
-			return audio.play();
-
+			return await audio.play();
+			
 		} catch (error) {
 			console.error(error);
 		}
 	};
+
 </script>
 
 <section class="m-5 flex flex-col">
 	<h4><span class="font-bold">{i + 1}.</span> {question}</h4>
-	<Button variant="secondary" class="mt-5" on:click={() => (open = true)}>
+	<Button variant="secondary" class="mt-5" on:click={() => {
+		(open = true);
+		speak();
+	}}>
 		<Ear class="mr-2" />
 		Hear Question
 	</Button>
