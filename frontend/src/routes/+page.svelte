@@ -2,8 +2,6 @@
     import Button from '$lib/components/ui/button/button.svelte'
 </script>
 
-<!-- <header class="min-h-[8vh]">
-</header> -->
 <main class="h-screen w-screen">
     <section class="h-full bg-gradient-to-r from-[#283048] to-[#859398] flex flex-col justify-center items-center text-3xl">
         <h2 class="text-white font-bold text-center mb-3">On-Demand personalized mock interviews</h2>
