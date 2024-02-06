@@ -23,7 +23,6 @@ export const actions = {
                 throw new Error('Uh Oh: Failed to generate questions.');
             }
             const data = await response.json();
-            console.log(data);
             const { questions } = data;
             setTimeout(() => {}, 3000) // timeout to exaggerate loading time
             return {
