@@ -15,6 +15,10 @@ plugins:
   - 'serverless-esbuild'
 
 functions:
+
+  VideoRequested:
+    handler: 'src/functions/VideoRequested/VideoRequested.handler'
+
   JobDescriptionSubmitted:
     description: |
       The function triggers upon form submission. It processes the data and sends keywords to the Open AI API for interview questions. The results are then returned to the client.
