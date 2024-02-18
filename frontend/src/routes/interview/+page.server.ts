@@ -1,35 +1,52 @@
-import type { PageServerLoad, Actions } from './$types';
+import type { PageServerLoad } from './$types';
+import OpenAI from 'openai';
+import { PRIVATE_OPENAI_API_KEY } from '$env/static/private';
+
+const openai = new OpenAI({ apiKey: PRIVATE_OPENAI_API_KEY});
+
 
 export const load = (async () => {
     return {};
 }) satisfies PageServerLoad;
 
 export const actions = {
-    generate: async ({ request, fetch }) => {
+    generate: async ({ request }) => {
         try {
             const form = await request.formData();
-            const description = form.get('description');
-            const url = 'https://b7oqgkz2ec.execute-api.us-east-1.amazonaws.com/generate';
-            const options = {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({ description }),
-            }
-            const response = await fetch(url, options);
-            if (!response.ok) {
-                console.error(response)
-                throw new Error('Uh Oh: Failed to generate questions.');
-            }
-            const data = await response.json();
-            const { questions } = data;
-            setTimeout(() => {}, 3000) // timeout to exaggerate loading time
+            const description = form.get('description')?.toString() || '';
+
+            const questions = await generateQuestions(description);
+            console.info(questions);
+
             return {
-                questions: questions
-            }
+                questions
+            };
         } catch (error) {
-            console.error(error);
+            return {};
         }
     }
-} satisfies Actions;
+};
+
+
+const generateQuestions = async (jobDescription: string) => {
+    try {
+        const completion = await openai.chat.completions.create({
+            model: 'gpt-3.5-turbo-1106',
+            messages: [
+                {
+                    role: 'system',
+                    content: 'Please generate me some practice technical interview questions based on the following job description. Please ensure each question is its owm separate index in a json array. Ensure that the name of the array is questions.'
+                },
+                {
+                    role: 'system',
+                    content: jobDescription
+                }
+            ],
+            response_format: { type: 'json_object' }
+        })
+        const data = JSON.parse(completion.choices[0].message.content || '{}')
+        return data.questions || [];
+    } catch (error) {
+        console.info(error);
+    }
+}
